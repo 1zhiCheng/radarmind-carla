@@ -24,7 +24,7 @@ Native RadarDetection BEV · mixed traffic · privileged teacher · LoRA SFT · 
   <a href="docs/VERSION_0_30_CARLA_FUSION_SFT.md">Training report</a>
 </p>
 
-> Smooth-preview provenance: 160 synchronized RGB/radar pairs were saved every 5 ticks from an 800-tick CARLA v0.30 collection run (4 Hz source). The displayed 20 FPS motion is generated with bidirectional motion-compensated interpolation; the README GIF is encoded at 12 FPS. It visualizes real ordered sensor frames, but every interpolated frame is not claimed to be a simulator observation. The live dashboard itself uses a continuous MJPEG stream.
+> High-frame-rate preview provenance: 160 synchronized RGB/radar pairs were saved every 5 ticks from an 800-tick CARLA v0.30 collection run (4 Hz source). Both the README animation and MP4 are now encoded at 20 FPS with bidirectional motion-compensated interpolation. They visualize real ordered sensor frames, but every interpolated frame is not claimed to be a simulator observation. Use the per-tick command below to record native 20 Hz sensor frames on the next run.
 
 ## Highlights
 
@@ -123,6 +123,7 @@ python -m radarmind.agent.carla_dynamic_demo \
   --host 127.0.0.1 --port 2000 \
   --web-host 127.0.0.1 --web-port 7860 \
   --policy-mode safety --max-steps 500 \
+  --fixed-delta-seconds 0.05 --save-every 1 \
   --npc-count 8 --cyclist-count 4 --pedestrian-count 16 \
   --ego-controller traffic_manager --no-spawn-obstacle --no-auto-reset
 ```
@@ -134,6 +135,8 @@ ssh -N -L 7860:127.0.0.1:7860 USER@SERVER_IP
 ```
 
 If local port 7860 is occupied, use `-L 7861:127.0.0.1:7860` and open `http://127.0.0.1:7861`.
+
+With synchronous mode (the default), `0.05 s` per tick and `--save-every 1` save one aligned RGB/radar pair for every simulator tick: a native 20 Hz sequence with no temporal frame interpolation.
 
 ## Add the VLM policy
 

@@ -1,0 +1,61 @@
+{
+  "output_dir": "$RADARMIND_ROOT/runs/carla_fusion_v0_30_closed_loop",
+  "trace_path": "$RADARMIND_ROOT/runs/carla_fusion_v0_30_closed_loop/dynamic_trace.jsonl",
+  "report_path": "$RADARMIND_ROOT/runs/carla_fusion_v0_30_closed_loop/dynamic_demo.report.json",
+  "dashboard_url": "http://127.0.0.1:7860",
+  "map": "Carla/Maps/Town10HD_Opt",
+  "records": 500,
+  "episodes": 1,
+  "npc_vehicles": 8,
+  "cyclists": 4,
+  "pedestrians": 16,
+  "max_moving_participants": 28,
+  "max_traffic_speed_kph": 31.883,
+  "max_ego_speed_kph": 25.631,
+  "total_ego_distance_m": 74.779,
+  "obstacle_spawned": false,
+  "snapshots_saved": 20,
+  "radar_representation": "native CARLA RadarDetection polar points rendered as BEV",
+  "generated_ra_rd": false,
+  "agent": "radarmind_fusion_teacher_agent_v0_30",
+  "policy_mode": "hybrid",
+  "model_path": "$RADARMIND_ROOT/models/Qwen2.5-VL-3B-Instruct",
+  "model_adapter_name": "",
+  "model_device": "cuda:0",
+  "model_final_state": {
+    "status": "ready",
+    "action": {
+      "type": "monitor",
+      "reason": "Model produced a structured action."
+    },
+    "adapter_name": "",
+    "adapter_path": "$RADARMIND_ROOT/models/radarmind-qwen2_5-vl-3b-lora-carla-fusion-action-first-v0_30",
+    "device": "cuda:0",
+    "started_at": 1785430550.2905993,
+    "loaded_at": 1785430560.1214466,
+    "prediction_text": "{\"recommended_action\":{\"type\":\"monitor\",\"distance\":33.273,\"closing_speed_mps\":0.0,\"ttc_s\":null}}",
+    "prediction_json": {
+      "recommended_action": {
+        "type": "monitor",
+        "distance": 33.273,
+        "closing_speed_mps": 0.0,
+        "ttc_s": null
+      }
+    },
+    "parse_error": null,
+    "step": 489,
+    "submitted_at": 1785430577.3916497,
+    "completed_at": 1785430579.3771913,
+    "latency_ms": 1804.8,
+    "age_sec": 0.29,
+    "fresh": true
+  },
+  "stream_transport": "multipart/x-mixed-replace MJPEG",
+  "ego_controller": "traffic_manager",
+  "cruise_speed_kph": 25.0,
+  "cleaned_existing_actors": 0,
+  "sync": true,
+  "realtime": true,
+  "interrupted": false,
+  "elapsed_sec": 29.38
+}

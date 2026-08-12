@@ -1,0 +1,5 @@
+RadarMind-CARLA
+
+This repository interfaces with CARLA, Qwen2.5-VL and Hugging Face libraries.
+Those projects and model weights retain their own licenses and terms. CARLA
+assets and simulator binaries are not redistributed by this repository.

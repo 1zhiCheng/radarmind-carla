@@ -1,0 +1,44 @@
+{
+  "name": "radarmind_default_carla_mock_policy",
+  "version": "0.24.0",
+  "description": "Default RadarMind action-to-CARLA-control mapping for mock and future CARLA closed-loop demos.",
+  "default_action": "keep_speed",
+  "unknown_action": "monitor",
+  "actions": {
+    "keep_speed": {
+      "throttle": 0.35,
+      "brake": 0.0,
+      "steer": 0.0,
+      "note": "keep speed"
+    },
+    "slow_down": {
+      "throttle": 0.15,
+      "brake": 0.25,
+      "steer": 0.0,
+      "note": "slow down"
+    },
+    "monitor": {
+      "throttle": 0.25,
+      "brake": 0.0,
+      "steer": 0.0,
+      "note": "monitor and keep a conservative speed"
+    },
+    "brake": {
+      "throttle": 0.0,
+      "brake": 0.65,
+      "steer": 0.0,
+      "note": "brake"
+    },
+    "emergency_brake": {
+      "throttle": 0.0,
+      "brake": 1.0,
+      "steer": 0.0,
+      "note": "emergency brake"
+    }
+  },
+  "limits": {
+    "throttle": [0.0, 1.0],
+    "brake": [0.0, 1.0],
+    "steer": [-1.0, 1.0]
+  }
+}

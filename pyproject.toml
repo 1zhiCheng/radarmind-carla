@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radarmind-carla"
+version = "0.1.0"
+description = "Camera-radar VLM agent with a safety-shielded CARLA closed loop"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = ["Pillow>=10.0", "numpy>=1.26"]
+
+[project.optional-dependencies]
+vlm = [
+  "transformers>=4.51.0",
+  "peft>=0.19.0",
+  "accelerate>=1.10.0",
+  "qwen-vl-utils>=0.0.14",
+]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["radarmind*"]
+
+[tool.setuptools.package-data]
+radarmind = ["configs/*.json"]

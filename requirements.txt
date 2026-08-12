@@ -1,0 +1,9 @@
+# Install PyTorch separately for the CUDA driver first.
+carla==0.9.16
+Pillow>=10.0
+numpy>=1.26
+transformers>=4.51.0
+peft>=0.19.0
+accelerate>=1.10.0
+qwen-vl-utils>=0.0.14
+tqdm>=4.66

@@ -1,0 +1,38 @@
+{
+  "records": 500,
+  "final_actions": {
+    "keep_speed": 113,
+    "slow_down": 333,
+    "brake": 54
+  },
+  "decision_sources": {
+    "safety_fallback": 202,
+    "radarmind": 169,
+    "radarmind+safety_agree": 75,
+    "safety_shield": 54
+  },
+  "model_status": {
+    "loading": 144,
+    "ready": 356
+  },
+  "model_actions": {
+    "none": 202,
+    "slow_down": 298
+  },
+  "model_fresh_frames": 298,
+  "model_unique_steps": [
+    128,
+    168,
+    208,
+    248,
+    288,
+    328,
+    368
+  ],
+  "model_parse_errors": 0,
+  "last_model_latency_ms": 1804.8,
+  "ego_distance_m": 74.779,
+  "max_moving_participants": 28,
+  "generated_ra_rd": false,
+  "adapter_path": "$RADARMIND_ROOT/models/radarmind-qwen2_5-vl-3b-lora-carla-fusion-action-first-v0_30"
+}

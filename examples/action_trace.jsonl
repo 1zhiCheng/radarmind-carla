@@ -1,0 +1,3 @@
+{"sample_id":"demo-0001","normalized_action":{"type":"keep_speed","reason":"Lane is clear."}}
+{"sample_id":"demo-0002","normalized_action":{"type":"slow_down","reason":"Closing vehicle ahead."}}
+{"sample_id":"demo-0003","normalized_action":{"type":"brake","reason":"Short TTC in ego corridor."}}

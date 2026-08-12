@@ -19,12 +19,12 @@ Native RadarDetection BEV · mixed traffic · privileged teacher · LoRA SFT · 
 </p>
 
 <p align="center">
-  <a href="assets/demo/carla_closed_loop_samples.mp4">Download MP4</a> ·
+  <a href="assets/demo/carla_closed_loop_samples.mp4">20 FPS MP4</a> ·
   <a href="examples/verified_run_report.json">Verified run report</a> ·
   <a href="docs/VERSION_0_30_CARLA_FUSION_SFT.md">Training report</a>
 </p>
 
-> The GIF is assembled from synchronized snapshots of a real verified CARLA run; the dashboard itself is a continuous MJPEG stream. It is not presented as a frame-perfect recording of every simulator tick.
+> Smooth-preview provenance: 160 synchronized RGB/radar pairs were saved every 5 ticks from an 800-tick CARLA v0.30 collection run (4 Hz source). The displayed 20 FPS motion is generated with bidirectional motion-compensated interpolation; the README GIF is encoded at 12 FPS. It visualizes real ordered sensor frames, but every interpolated frame is not claimed to be a simulator observation. The live dashboard itself uses a continuous MJPEG stream.
 
 ## Highlights
 

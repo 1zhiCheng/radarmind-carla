@@ -22,7 +22,8 @@ Native RadarDetection BEV · mixed traffic · privileged teacher · LoRA SFT · 
   <a href="assets/demo/carla_closed_loop_samples.mp4">20 FPS MP4</a> ·
   <a href="examples/native_20hz_run_report.json">Native 20 Hz report</a> ·
   <a href="examples/verified_run_report.json">Hybrid Agent report</a> ·
-  <a href="docs/VERSION_0_30_CARLA_FUSION_SFT.md">Training report</a>
+  <a href="docs/VERSION_0_30_CARLA_FUSION_SFT.md">Training report</a> ·
+  <a href="docs/RESUME_PROJECT_CARLA_CLOSED_LOOP.md">Resume-ready project summary</a>
 </p>
 
 > Native-capture provenance: the hero animation and MP4 contain all 500 synchronized RGB/radar pairs from a 500-tick synchronous CARLA run at 0.05 s/tick. They are directly encoded at 20 FPS with no duplicated or interpolated temporal frames. The run covered 76.454 m with 10 vehicles, 5 cyclists and 20 pedestrians. It used the deterministic safety teacher to isolate sensor/rendering throughput; the separate Hybrid Agent report audits VLM-in-the-loop control.
